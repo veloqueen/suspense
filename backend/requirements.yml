@@ -1,0 +1,11 @@
+name: suspense
+dependencies:
+  - python=3.9
+  - pip=21.0.1
+  - psycopg2
+  - pip:
+      - Django==3.1.7
+      - django-cors-headers==3.7.0
+      - djangorestframework==3.12.2
+      - djangorestframework_simplejwt==4.6
+      - flake8
