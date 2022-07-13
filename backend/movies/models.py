@@ -9,3 +9,6 @@ class Movies(models.Model):
     year = models.CharField(max_length=4, default='tba')
     description = models.TextField(verbose_name="text", blank=True, default='tba')
     #avatar = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, blank=True, null=True,)
+
+    def __str__(self):
+        return self.description
