@@ -11,4 +11,4 @@ class Movies(models.Model):
     #avatar = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, blank=True, null=True,)
 
     def __str__(self):
-        return self.description
+        return self.name

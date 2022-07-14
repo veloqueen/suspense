@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from movies.views import WelcomeView, SayHelloView
+from movies.views import GetMoviesList, CreateMovies
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', WelcomeView.as_view()),
-    path('<str:name>/', SayHelloView.as_view())
+    path('movies/', GetMoviesList.as_view()),
+    path('movies/add/', CreateMovies.as_view())
 ]
