@@ -1,12 +1,15 @@
-#from django.shortcuts import render
-from django.http import HttpResponse
-from django.views import View
+from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateDestroyAPIView, RetrieveAPIView
+from movies.models import Movies
+from movies.serializers import MoviesSerializer
 
-class WelcomeView(View):
-    def get(self, request):
-        return HttpResponse('Hello Django View')
 
-class SayHelloView(View):
-    def get(self, request, *args, **kwargs):
-        name = kwargs.get('name')
-        return HttpResponse(f'Hello {name}! Nice to meet ya')
+class GetMoviesList(ListAPIView):
+    queryset = Movies.objects.all()
+    serializer_class = MoviesSerializer
+
+class CreateMovies(CreateAPIView):
+    queryset = Movies.objects.all()
+    serializer_class = MoviesSerializer
+
+    def perform_create(self, serializer):
+        serializer.save()
