@@ -20,5 +20,5 @@ from movies.views import GetMoviesList, CreateMovies
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('movies/', GetMoviesList.as_view()),
-    path('movies/add/', CreateMovies.as_view())
+    path('movies/add/', CreateMovies.as_view()),
 ]
