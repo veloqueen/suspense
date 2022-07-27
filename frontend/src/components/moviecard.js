@@ -1,15 +1,17 @@
 import React from 'react'
 
-const MovieCard = (movies) => {
+const MovieCard = (movie) => {
     
     return (
         <div>
-            <div>{movies.name}</div>
-            <div>{movies.director}</div>
-            <div>{movies.year}</div>
-            <div>{movies.description}</div>
+            <div>{movie.name}</div>
+            <div>{movie.director}</div>
+            <div>{movie.year}</div>
+            <div>{movie.description}</div>
         </div>
     )
 }
 
 export default MovieCard
+
+// return <li key={movie.id}>{movie.name} , {movie.genre}</li>
