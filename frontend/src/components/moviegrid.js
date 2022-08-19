@@ -30,7 +30,8 @@ const MovieGrid = ( props ) => {
                 {movies.map((movie) => { return <MovieCard 
                         key={movie.id} 
                         name={movie.name} 
-                        director={movie.director} 
+                        director={movie.director}
+                        genre={movie.genre} 
                         year={movie.year} 
                         description={movie.description}
                         >                 
